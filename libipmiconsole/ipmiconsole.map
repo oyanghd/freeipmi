@@ -1,0 +1,25 @@
+{
+  global:
+    ipmiconsole_engine_init;
+    ipmiconsole_engine_submit;
+    ipmiconsole_engine_submit_block;
+    ipmiconsole_engine_teardown;
+    ipmiconsole_ctx_create;
+    ipmiconsole_ctx_set_config;
+    ipmiconsole_ctx_get_config;
+    ipmiconsole_ctx_errnum;
+    ipmiconsole_ctx_strerror;
+    ipmiconsole_ctx_errormsg;
+    ipmiconsole_ctx_status;
+    ipmiconsole_ctx_fd;
+    ipmiconsole_ctx_generate_break;
+    ipmiconsole_ctx_destroy;
+    ipmiconsole_username_is_valid;
+    ipmiconsole_password_is_valid;
+    ipmiconsole_k_g_is_valid;
+    ipmiconsole_privilege_level_is_valid;
+    ipmiconsole_cipher_suite_id_is_valid;
+    ipmiconsole_workaround_flags_is_valid;
+  local:
+    *;
+};

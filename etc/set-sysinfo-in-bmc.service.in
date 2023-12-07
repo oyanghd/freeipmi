@@ -1,0 +1,17 @@
+[Unit]
+Description=Set System information in BMC
+Documentation=man:bmc-device
+
+ConditionFileIsExecutable=@X_SBINDIR@/bmc-device
+ConditionFileNotEmpty=@X_SYSCONFDIR@/os-release
+
+[Service]
+Type=oneshot
+EnvironmentFile=@X_SYSCONFDIR@/os-release
+ExecStart=@X_SBINDIR@/bmc-device --set-operating-system-name=${NAME}
+ExecStart=@X_SBINDIR@/bmc-device --set-primary-operating-system-name=${NAME}
+ExecStart=@X_SBINDIR@/bmc-device --set-present-os-version-number=${VERSION}
+ExecStart=@X_SBINDIR@/bmc-device --set-system-name=%H
+
+[Install]
+WantedBy=basic.target

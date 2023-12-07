@@ -1,0 +1,12 @@
+{
+  global:
+    ipmi*;
+    fiid*;
+    FIID*;
+    fill*;
+    tmpl*;
+    assemble*;
+    unassemble*;
+  local:
+    *;
+};
